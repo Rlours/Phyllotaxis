@@ -28,7 +28,10 @@ df<-data.frame(t,x,y)
 
 # Make a scatter plot of points in a spiral
 p<-ggplot(df ,aes(x*t,y*t))
-p+geom_point()
+p+geom_point()+theme(panel.background = element_rect(fill = "white"),axis.text.x = element_blank(),
+                     axis.text.y = element_blank(),axis.title.x = element_blank(),
+                     axis.title.y = element_blank(),panel.grid.major = element_blank(),
+                     panel.grid.minor = element_blank(),axis.ticks=element_blank())
 
 
 
